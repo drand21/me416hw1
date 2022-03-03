@@ -1,8 +1,10 @@
-"""Example of how to set attributes in ROS messages"""
+""" Example of how to set attributes in ROS messages """
+
+from geometry_msgs.msg import Twist
 
 def twist_fill():
     """Creates new Twist object"""
-    #Populates the linear and angular coordinate values with 3.0
+    """Populates the linear and angular coordinate values with 3.0"""
     A = Twist()
     A.linear.x = 0.5
     A.linear.y = 0.5
