@@ -4,7 +4,7 @@ import rospy
 from std_msgs.msg import String
 
 def callback(msg):
-    """ Callback to receive a message and accumulate it """
+    #Callback to receive a message and accumulate it
     global msg_accumulated
     content = msg.data
     msg_accumulated.data = ' '.join([msg_accumulated.data, content])
