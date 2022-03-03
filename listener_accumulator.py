@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+""" listener_accumulator """
 
 import rospy
 from std_msgs.msg import String
