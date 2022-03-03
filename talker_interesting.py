@@ -17,7 +17,7 @@ def main():
     msg = ["beans", "greens", "tomatoes", "potatoes"]
 
     #Set rate to use (in Hz)
-    rate = rospy.Rate(4.0/3.0)
+    rate = rospy.Rate(2)
 
     #Set counter to iterate through msg
     i = 0
