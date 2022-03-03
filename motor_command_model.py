@@ -25,6 +25,7 @@ def model_parameters():
 
 
 def twist_to_speeds(speed_linear, speed_angular):
+    """function twist_to_speeds"""
     # Takes the desired linear and angular velocity
     # returns normalized speeds for the left and right motor
     # Inputs are in range of [-1.0, 1.0] and outputs are in same range
