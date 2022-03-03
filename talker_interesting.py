@@ -21,7 +21,6 @@ def main():
 
     #Set counter to iterate through msg
     i = 0
-    
     while not rospy.is_shutdown():
         if i == len(msg):
             i = 0
