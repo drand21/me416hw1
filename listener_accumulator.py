@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
+
 import rospy
 from std_msgs.msg import String
 
 def callback(msg):
-    #Callback to receive a message and accumulate it
+    """allback to receive a message and accumulate it"""
     global msg_accumulated
     content = msg.data
     msg_accumulated.data = ' '.join([msg_accumulated.data, content])
@@ -23,7 +24,8 @@ def main():
     rospy.Subscriber('chatter', String, callback)
 
     #while loop to publish at 1/3Hz
-    rate = rospy.Rate(1.0/3.0) #have to do 1.0/3.0 becasue that will make a double (1/3 will be converted to 0)
+    rate = rospy.Rate(1.0/3.0) #have to do 1.0/3.0 becasue that will make a double
+     #(1/3 will be converted to 0)
     while not rospy.is_shutdown():
         pub.publish(msg_accumulated)
         rospy.loginfo(' I accumulated %s', msg_accumulated.data)
