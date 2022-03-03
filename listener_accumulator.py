@@ -1,7 +1,10 @@
 #!/usr/bin/env python
+"""listener accumulator"""
 
 import rospy
 from std_msgs.msg import String
+
+msg_accumulated = String()
 
 def callback(msg):
     """ Callback to receive a message and accumulate it """
@@ -13,7 +16,6 @@ def main():
     """Node setup and main ROS loop"""
     #define global msg_accumulated so it can be used in callback and main
     global msg_accumulated
-    msg_accumulated = String()
 
     #Init node. anonymous=True allows multiple launch with automatically assigned names
     rospy.init_node('listener_accumulator', anonymous='True')
